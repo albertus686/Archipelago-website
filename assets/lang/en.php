@@ -1,0 +1,25 @@
+<?php
+return [
+  "home_title" => "Exporting Sustainable Wood Pellets Worldwide",
+  "home_sub" => "Premium wood pellets exported globally with sustainable practices.",
+  "about_title" => "About Us",
+  "about_text" => "PT Archipelago Jaya Nusantara is a leading exporter of high-quality wood pellets from responsibly managed forests.",
+  "products_title" => "Our Products",
+  "sustainability_title" => "Sustainability",
+  "contact_title" => "Contact",
+  "get_quote" => "Get Quote",
+  "explore_products" => "Explore Products",
+  "contact_button" => "Send Message",
+  "quote_button" => "Request Quote",
+  "name" => "Name",
+  "email" => "Email",
+  "message" => "Message",
+  "company" => "Company",
+  "product" => "Product",
+  "quantity" => "Quantity (tons)",
+  "terms" => "Terms & Conditions",
+  "privacy" => "Privacy Policy",
+  "address" => "Jl. Contoh No.9, Jakarta, Indonesia",
+  "phone" => "+62 812-0000-0000",
+  "email_contact" => "info@archipelagonusantara.co.id"
+];

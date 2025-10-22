@@ -1,0 +1,25 @@
+<?php
+return [
+  "home_title" => "Exporter des granulés de bois durables dans le monde entier",
+  "home_sub" => "Granulés de bois premium exportés mondialement avec des pratiques durables.",
+  "about_title" => "À propos de nous",
+  "about_text" => "PT Archipelago Jaya Nusantara est un exportateur de granulés de bois de haute qualité issu de forêts gérées de manière responsable.",
+  "products_title" => "Nos produits",
+  "sustainability_title" => "Durabilité",
+  "contact_title" => "Contact",
+  "get_quote" => "Obtenir un devis",
+  "explore_products" => "Découvrir les produits",
+  "contact_button" => "Envoyer le message",
+  "quote_button" => "Demander un devis",
+  "name" => "Nom",
+  "email" => "E-mail",
+  "message" => "Message",
+  "company" => "Entreprise",
+  "product" => "Produit",
+  "quantity" => "Quantité (tonnes)",
+  "terms" => "Conditions",
+  "privacy" => "Politique de confidentialité",
+  "address" => "Jl. Contoh No.9, Jakarta, Indonesia",
+  "phone" => "+62 812-0000-0000",
+  "email_contact" => "info@archipelagonusantara.co.id"
+];

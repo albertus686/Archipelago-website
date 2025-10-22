@@ -1,0 +1,382 @@
+:root {
+  --green: #0bb04b;
+  --blue: #0B6EFD;
+  --accent: linear-gradient(90deg, var(--green), var(--blue));
+  --dark: #071122;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Roboto, system-ui, Arial;
+  margin: 0;
+  color: #122;
+  transition: background .35s, color .35s;
+}
+
+.nav-box {
+  /* Ubah ke background gelap semi-transparan */
+  background: rgba(7, 17, 34, 0.7); /* Warna --dark (#071122) dengan 70% opacity */
+  backdrop-filter: blur(6px);
+  transition: all .35s;
+  padding: 0 12px;
+}
+
+.nav-box.fixed-top {
+  height: 80px;
+}
+
+.site-logo {
+  width: 120px;
+  height: auto;
+}
+
+/* Nav Link Hover */
+.nav-box .nav-link:hover {
+  color: var(--green); /* Warna saat hover */
+  position: relative;
+}
+
+
+.btn-cta {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 18px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(11, 176, 75, 0.12);
+}
+
+.hero {
+  height: 75vh;
+  /* Overlay gradasi bisa sedikit dikurangi jika background navbar sudah gelap */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('images/wood-pellet-homepage.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: left;
+}
+
+.hero .hero-inner {
+  max-width: 940px;
+  padding: 40px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), transparent);
+  border-radius: 8px;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+
+.card-clean {
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.03);
+  border: 1px solid #eef2f5;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.footer {
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  color: #fff;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.footer h6 {
+  color: #fff;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #25D366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4000;
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.18);
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  transition: opacity .6s ease;
+  pointer-events: auto;
+}
+
+.loader-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loader-logo {
+  width: 120px;
+}
+
+.loader-text {
+  font-weight: 600;
+  color: var(--green);
+  font-size: 1.05rem;
+}
+
+.fade-slide-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.fade-slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all .6s ease;
+}
+
+.dark-mode {
+  background: #071122;
+  color: #e6eef8;
+}
+
+/* Background navbar saat scroll di dark mode (sudah dipindah ke bawah) */
+
+
+@media (max-width: 768px) {
+  /* Aturan responsive dipindah ke bawah agar lebih terstruktur */
+}
+
+
+/* =======================================
+   BLOK LOGIKA NAVBAR (SEMUA JADI SATU)
+   ======================================= */
+
+/* --- 1. STATE DEFAULT (DI ATAS, TRANSPARAN) --- */
+/* .nav-box (Sudah diubah di atas) */
+
+/* Teks default (putih) */
+.nav-box .company-name,
+.nav-box .nav-link,
+.nav-box #themeToggle {
+  color: #fff;
+}
+.nav-box .text-muted {
+  color: #eee !important; /* Jaga agar tetap !important */
+}
+.nav-box #themeToggle {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.nav-box .nav-link:hover { /* Hover dipindah kesini */
+  color: var(--green);
+  position: relative;
+}
+.nav-box #themeToggle:hover {
+  color: #000;
+  background: #fff;
+}
+
+
+/* --- 2. STATE SCROLLED (LIGHT MODE) --- */
+.nav-box.scrolled {
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
+}
+
+/* Teks scrolled (light mode) */
+.nav-box.scrolled .company-name,
+.nav-box.scrolled .nav-link,
+.nav-box.scrolled #themeToggle {
+  color: #122;
+}
+.nav-box.scrolled .text-muted {
+  color: #555 !important; /* Jaga agar tetap !important */
+}
+.nav-box.scrolled #themeToggle {
+  border-color: #ddd;
+}
+.nav-box.scrolled #themeToggle:hover {
+  color: #fff;
+  background: #122;
+}
+
+
+/* --- 3. STATE SCROLLED (DARK MODE) --- */
+.dark-mode .nav-box.scrolled {
+  background: var(--dark); /* var(--dark) is #071122 */
+}
+
+/* Teks scrolled (dark mode) */
+.dark-mode .nav-box.scrolled .company-name,
+.dark-mode .nav-box.scrolled .nav-link,
+.dark-mode .nav-box.scrolled #themeToggle {
+  color: #fff;
+}
+.dark-mode .nav-box.scrolled .text-muted {
+  color: #bbb !important; /* Jaga agar tetap !important */
+}
+.dark-mode .nav-box.scrolled #themeToggle {
+  border-color: #555;
+}
+.dark-mode .nav-box.scrolled #themeToggle:hover {
+  color: #000;
+  background: #fff;
+}
+
+/* --- 4. RESPONSIVE (MEDIA QUERY) --- */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+  .site-logo {
+    width: 96px;
+  }
+  .nav-box,
+  .nav-box.fixed-top {
+    height: 64px;
+  }
+}
+
+/* =======================================
+   STYLING UNTUK DROPDOWN BAHASA (FLAG)
+   ======================================= */
+
+.nav-box .fi {
+  width: 20px;
+  height: 15px;
+  border-radius: 3px;
+  background-size: cover;
+}
+
+
+/* =======================================
+   PERBAIKAN FOOTER (PROPORSIONAL)
+   ======================================= */
+
+/* 1. Atur logo putih baru */
+.footer-logo {
+  width: 240px;
+  height: auto;
+  margin-bottom: 0; /* Jarak logo nol */
+}
+
+/* 2. Atur teks di kolom brand */
+.footer-brand-col h5 {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 0.5rem; /* Beri sedikit jarak dari logo */
+  margin-bottom: 0.1rem; /* Jarak ke tagline */
+}
+.footer-brand-col p.small {
+  font-size: 0.9rem;
+}
+
+/* 3. Atur link di kolom Legal */
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 4. Atur ikon sosial */
+.footer .social {
+  color: #fff;
+  transition: all 0.2s;
+}
+.footer .social:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* 5. Rapikan Nested Row di Kolom Tengah */
+.footer .row .col-md-4 .row {
+  min-height: 100%;
+}
+.footer .row .col-md-4 h6 {
+  margin-top: 0;
+  margin-bottom: 0.75rem; /* Kembalikan jarak bawah heading */
+}
+
+
+/* =======================================
+   STYLING UNTUK PETA SEJAJAR DI FOOTER
+   ======================================= */
+
+.map-area-inline {
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+  height: 100%;
+  min-height: 250px;
+}
+
+.map-area-inline iframe {
+  display: block;
+  height: 100%;
+  min-height: 250px;
+}
+
+/* =======================================
+   PERBAIKAN ALIGNMENT IKON KONTAK FOOTER
+   ======================================= */
+
+.footer-contact-item {
+  display: flex; /* Aktifkan flexbox */
+  align-items: flex-start; /* Sejajarkan ikon ke atas teks */
+}
+
+.footer-contact-item i {
+  margin-top: 3px; /* Beri sedikit ruang atas agar ikon sejajar */
+  flex-shrink: 0; /* Mencegah ikon menyusut */
+}
+
+/* =======================================
+   STYLING TOMBOL QUOTE DI HERO
+   ======================================= */
+
+.hero .btn-hero-quote {
+  color: #fff; /* Teks putih */
+  border-color: #fff; /* Border putih */
+  border-width: 2px; /* Opsional: Sedikit tebalkan border */
+  transition: all 0.3s ease; /* Efek transisi halus */
+}
+
+/* Efek saat di-hover */
+.hero .btn-hero-quote:hover {
+  background-color: #fff; /* Background jadi putih */
+  color: #122; /* Teks jadi gelap */
+}

@@ -1,0 +1,7 @@
+<?php
+$data = json_decode(file_get_contents(__DIR__.'/backend/data.json'), true);
+?><!doctype html><html><head><meta charset="utf-8"><title>Admin - Submissions</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"></head>
+<body class="p-4"><div class="container"><h1>Admin - Submissions</h1>
+<h3>Complaints</h3><table class="table table-striped"><thead><tr><th>#</th><th>Name</th><th>Email</th><th>Message</th><th>Date</th></tr></thead><tbody><?php foreach($data['complaints'] as $i=>$c){ echo '<tr><td>'.($i+1).'</td><td>'.htmlspecialchars($c['name']).'</td><td>'.htmlspecialchars($c['email']).'</td><td>'.htmlspecialchars($c['message']).'</td><td>'.$c['date'].'</td></tr>'; } ?></tbody></table>
+<h3>Quotes</h3><table class="table table-striped"><thead><tr><th>#</th><th>Company</th><th>Email</th><th>Product</th><th>Qty</th><th>Date</th></tr></thead><tbody><?php foreach($data['quotes'] as $i=>$q){ echo '<tr><td>'.($i+1).'</td><td>'.htmlspecialchars($q['company']).'</td><td>'.htmlspecialchars($q['email']).'</td><td>'.htmlspecialchars($q['product']).'</td><td>'.htmlspecialchars($q['quantity']).'</td><td>'.$q['date'].'</td></tr>'; } ?></tbody></table></div></body></html>

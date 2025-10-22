@@ -1,0 +1,25 @@
+<?php
+return [
+  "home_title" => "向全球出口可持续木质颗粒",
+  "home_sub" => "优质木颗粒通过可持续方式出口到全球。",
+  "about_title" => "关于我们",
+  "about_text" => "PT Archipelago Jaya Nusantara 是一家出口高质量木颗粒的公司，来自负责任管理的森林。",
+  "products_title" => "我们的产品",
+  "sustainability_title" => "可持续性",
+  "contact_title" => "联系",
+  "get_quote" => "获取报价",
+  "explore_products" => "查看产品",
+  "contact_button" => "发送信息",
+  "quote_button" => "申请报价",
+  "name" => "姓名",
+  "email" => "电子邮件",
+  "message" => "留言",
+  "company" => "公司",
+  "product" => "产品",
+  "quantity" => "数量（吨）",
+  "terms" => "条款和条件",
+  "privacy" => "隐私政策",
+  "address" => "Jl. Contoh No.9, Jakarta, Indonesia",
+  "phone" => "+62 812-0000-0000",
+  "email_contact" => "info@archipelagonusantara.co.id"
+];

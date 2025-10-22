@@ -1,0 +1,25 @@
+<?php
+return [
+  "home_title" => "Mengekspor Pelet Kayu Berkelanjutan ke Seluruh Dunia",
+  "home_sub" => "Pelet kayu premium diekspor secara global dengan praktik berkelanjutan.",
+  "about_title" => "Tentang Kami",
+  "about_text" => "PT Archipelago Jaya Nusantara adalah eksportir pelet kayu berkualitas tinggi dari hutan yang dikelola secara bertanggung jawab.",
+  "products_title" => "Produk Kami",
+  "sustainability_title" => "Keberlanjutan",
+  "contact_title" => "Kontak",
+  "get_quote" => "Minta Penawaran",
+  "explore_products" => "Lihat Produk",
+  "contact_button" => "Kirim Pesan",
+  "quote_button" => "Minta Penawaran",
+  "name" => "Nama",
+  "email" => "Surel",
+  "message" => "Pesan",
+  "company" => "Perusahaan",
+  "product" => "Produk",
+  "quantity" => "Kuantitas (ton)",
+  "terms" => "Syarat & Ketentuan",
+  "privacy" => "Kebijakan Privasi",
+  "address" => "Jl. Contoh No.9, Jakarta, Indonesia",
+  "phone" => "+62 812-0000-0000",
+  "email_contact" => "info@archipelagonusantara.co.id"
+];
