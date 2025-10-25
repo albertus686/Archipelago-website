@@ -13,8 +13,8 @@
   <section class="section" id="about">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right"><img src=".png" class="img-fluid rounded"></div>
-        <div class="col-md-6" data-aos="fade-left"><h2><?php echo t('about_title'); ?></h2><p><?php echo t('about_text'); ?></p></div>
+       <div class="col-md-6" data-aos="fade-right"><img src="assets/images/office-skyscrapers-business-district.jpg" class="img-fluid rounded about-section-image"></div>
+       <div class="col-md-6" data-aos="fade-left"><h2><?php echo t('about_title'); ?></h2><?php echo t('about_text'); ?></div>
       </div>
     </div>
   </section>

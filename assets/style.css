@@ -17,8 +17,7 @@ body {
 }
 
 .nav-box {
-  /* Ubah ke background gelap semi-transparan */
-  background: rgba(7, 17, 34, 0.7); /* Warna --dark (#071122) dengan 70% opacity */
+  background: rgba(7, 17, 34, 0.7);
   backdrop-filter: blur(6px);
   transition: all .35s;
   padding: 0 12px;
@@ -31,11 +30,13 @@ body {
 .site-logo {
   width: 120px;
   height: auto;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 /* Nav Link Hover */
 .nav-box .nav-link:hover {
-  color: var(--green); /* Warna saat hover */
+  color: var(--green);
   position: relative;
 }
 
@@ -51,8 +52,7 @@ body {
 
 .hero {
   height: 75vh;
-  /* Overlay gradasi bisa sedikit dikurangi jika background navbar sudah gelap */
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('images/wood-pellet-homepage.jpeg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('images/wood-pellet-homepage.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,9 +168,6 @@ body {
   color: #e6eef8;
 }
 
-/* Background navbar saat scroll di dark mode (sudah dipindah ke bawah) */
-
-
 @media (max-width: 768px) {
   /* Aturan responsive dipindah ke bawah agar lebih terstruktur */
 }
@@ -180,22 +177,18 @@ body {
    BLOK LOGIKA NAVBAR (SEMUA JADI SATU)
    ======================================= */
 
-/* --- 1. STATE DEFAULT (DI ATAS, TRANSPARAN) --- */
-/* .nav-box (Sudah diubah di atas) */
-
-/* Teks default (putih) */
 .nav-box .company-name,
 .nav-box .nav-link,
 .nav-box #themeToggle {
   color: #fff;
 }
 .nav-box .text-muted {
-  color: #eee !important; /* Jaga agar tetap !important */
+  color: #eee !important;
 }
 .nav-box #themeToggle {
   border-color: rgba(255, 255, 255, 0.5);
 }
-.nav-box .nav-link:hover { /* Hover dipindah kesini */
+.nav-box .nav-link:hover {
   color: var(--green);
   position: relative;
 }
@@ -204,21 +197,18 @@ body {
   background: #fff;
 }
 
-
-/* --- 2. STATE SCROLLED (LIGHT MODE) --- */
 .nav-box.scrolled {
   background: #fff;
   box-shadow: 0 8px 30px rgba(2, 6, 23, 0.06);
 }
 
-/* Teks scrolled (light mode) */
 .nav-box.scrolled .company-name,
 .nav-box.scrolled .nav-link,
 .nav-box.scrolled #themeToggle {
   color: #122;
 }
 .nav-box.scrolled .text-muted {
-  color: #555 !important; /* Jaga agar tetap !important */
+  color: #555 !important;
 }
 .nav-box.scrolled #themeToggle {
   border-color: #ddd;
@@ -228,20 +218,17 @@ body {
   background: #122;
 }
 
-
-/* --- 3. STATE SCROLLED (DARK MODE) --- */
 .dark-mode .nav-box.scrolled {
-  background: var(--dark); /* var(--dark) is #071122 */
+  background: var(--dark);
 }
 
-/* Teks scrolled (dark mode) */
 .dark-mode .nav-box.scrolled .company-name,
 .dark-mode .nav-box.scrolled .nav-link,
 .dark-mode .nav-box.scrolled #themeToggle {
   color: #fff;
 }
 .dark-mode .nav-box.scrolled .text-muted {
-  color: #bbb !important; /* Jaga agar tetap !important */
+  color: #bbb !important;
 }
 .dark-mode .nav-box.scrolled #themeToggle {
   border-color: #555;
@@ -251,7 +238,6 @@ body {
   background: #fff;
 }
 
-/* --- 4. RESPONSIVE (MEDIA QUERY) --- */
 @media (max-width: 768px) {
   .hero {
     height: 50vh;
@@ -281,25 +267,22 @@ body {
    PERBAIKAN FOOTER (PROPORSIONAL)
    ======================================= */
 
-/* 1. Atur logo putih baru */
 .footer-logo {
   width: 240px;
   height: auto;
-  margin-bottom: 0; /* Jarak logo nol */
+  margin-bottom: 0;
 }
 
-/* 2. Atur teks di kolom brand */
 .footer-brand-col h5 {
   color: #fff;
   font-weight: 600;
-  margin-top: 0.5rem; /* Beri sedikit jarak dari logo */
-  margin-bottom: 0.1rem; /* Jarak ke tagline */
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 .footer-brand-col p.small {
   font-size: 0.9rem;
 }
 
-/* 3. Atur link di kolom Legal */
 .footer-link {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -312,7 +295,6 @@ body {
   text-decoration: underline;
 }
 
-/* 4. Atur ikon sosial */
 .footer .social {
   color: #fff;
   transition: all 0.2s;
@@ -322,19 +304,13 @@ body {
   transform: scale(1.1);
 }
 
-/* 5. Rapikan Nested Row di Kolom Tengah */
 .footer .row .col-md-4 .row {
   min-height: 100%;
 }
 .footer .row .col-md-4 h6 {
   margin-top: 0;
-  margin-bottom: 0.75rem; /* Kembalikan jarak bawah heading */
+  margin-bottom: 0.75rem;
 }
-
-
-/* =======================================
-   STYLING UNTUK PETA SEJAJAR DI FOOTER
-   ======================================= */
 
 .map-area-inline {
   border-radius: 12px;
@@ -350,33 +326,58 @@ body {
   min-height: 250px;
 }
 
-/* =======================================
-   PERBAIKAN ALIGNMENT IKON KONTAK FOOTER
-   ======================================= */
-
 .footer-contact-item {
-  display: flex; /* Aktifkan flexbox */
-  align-items: flex-start; /* Sejajarkan ikon ke atas teks */
+  display: flex;
+  align-items: flex-start;
 }
 
 .footer-contact-item i {
-  margin-top: 3px; /* Beri sedikit ruang atas agar ikon sejajar */
-  flex-shrink: 0; /* Mencegah ikon menyusut */
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.hero .btn-hero-quote {
+  color: #fff;
+  border-color: #fff;
+  border-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-hero-quote:hover {
+  background-color: #fff;
+  color: #122;
 }
 
 /* =======================================
-   STYLING TOMBOL QUOTE DI HERO
+   PERBAIKAN JARAK PARAGRAF DI ABOUT US
    ======================================= */
-
-.hero .btn-hero-quote {
-  color: #fff; /* Teks putih */
-  border-color: #fff; /* Border putih */
-  border-width: 2px; /* Opsional: Sedikit tebalkan border */
-  transition: all 0.3s ease; /* Efek transisi halus */
+#about .col-md-6 p {
+  margin-bottom: 1rem;
 }
 
-/* Efek saat di-hover */
-.hero .btn-hero-quote:hover {
-  background-color: #fff; /* Background jadi putih */
-  color: #122; /* Teks jadi gelap */
+#about .col-md-6 p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* =======================================
+   MENYESUAIKAN TINGGI GAMBAR ABOUT US
+   ======================================= */
+.about-section-image {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 991px) {
+  .about-section-image {
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-section-image {
+    height: 250px;
+    margin-bottom: 2rem;
+  }
 }
