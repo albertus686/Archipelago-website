@@ -21,9 +21,9 @@
             <p class="small mb-3 footer-contact-item"><i class="fa fa-envelope me-2"></i><?php echo t('email_contact'); ?></p> 
             
             <div class="mt-3"> 
-              <a href="#" class="me-3 social"><i class="fab fa-whatsapp fa-lg"></i></a>
-              <a href="#" class="me-3 social"><i class="fab fa-instagram fa-lg"></i></a>
-              <a href="#" class="me-3 social"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%20looking%20for." class="me-3 social"><i class="fab fa-whatsapp fa-lg"></i></a>
+              <a href="https://www.facebook.com/archipelagojayanusantara" class="me-3 social"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="https://www.linkedin.com/company/107803014/" class="me-3 social"><i class="fab fa-linkedin fa-lg"></i></a>
             </div>
           </div>
 
@@ -42,7 +42,7 @@
       </div>
 
     </div> </div> </footer>
-<a class="whatsapp-float" href="https://wa.me/6280000000000" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+<a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%20looking%20for." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

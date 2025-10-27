@@ -1,9 +1,9 @@
 <?php
 return [
-  "home_title" => "Exporter des granulés de bois durables dans le monde entier",
-  "home_sub" => "Granulés de bois premium exportés mondialement avec des pratiques durables.",
+  "home_title" => "Exportation de granulés de bois durables depuis l'Indonésie",
+  "home_sub" => "Fourniture de combustible biomasse d'origine responsable aux marchés mondiaux.",
   "about_title" => "À propos de nous",
-  "about_text" => "PT Archipelago Jaya Nusantara est un exportateur de granulés de bois de haute qualité issu de forêts gérées de manière responsable.",
+  "about_text" => "<p>PT Archipelago Jaya Nusantara ist ein vielseitiges Unternehmen, das in verschiedenen Bereichen tätig ist – unter anderem im Biomasse-Sektor. Unsere Vision ist es, den weltweiten Übergang zu umweltfreundlicheren und nachhaltigeren Energiequellen zu fördern, indem wir hochwertige Produkte wie Holzpellets (Wood Pellets) anbieten.</p><p>Als internationaler Exporteur von Holzpellets engagieren wir uns dafür, unseren Käufern die gewünschten Produkte durch klare, schnelle und effiziente Kommunikation bereitzustellen. Wir glauben, dass erfolgreiche Geschäftsbeziehungen auf Vertrauen, Transparenz und Professionalität basieren.</p><p>Mit dem Geist von Nachhaltigkeit und Innovation strebt PT Archipelago Jaya Nusantara danach, ein zuverlässiger Partner für grüne Energieversorgung zu sein – für eine sauberere und nachhaltigere Welt.</p>",
   "products_title" => "Nos produits",
   "sustainability_title" => "Durabilité",
   "contact_title" => "Contact",
@@ -19,7 +19,7 @@ return [
   "quantity" => "Quantité (tonnes)",
   "terms" => "Conditions",
   "privacy" => "Politique de confidentialité",
-  "address" => "Jl. Contoh No.9, Jakarta, Indonesia",
-  "phone" => "+62 812-0000-0000",
-  "email_contact" => "info@archipelagonusantara.co.id"
+  "address" => "Jl. Mampang Prapatan Raya No.73A Lantai 3, Desa/Kelurahan Tegal Parang, 12790",
+  "phone" => "+62 8785700800872",
+  "email_contact" => "archipelagojayanusantara@gmail.com"
 ];

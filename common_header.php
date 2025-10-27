@@ -73,7 +73,6 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
 
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="?lang=en">English</a></li>
-    <li><a class="dropdown-item" href="?lang=id">Indonesia</a></li>
     <li><a class="dropdown-item" href="?lang=zh">中文</a></li>
     <li><a class="dropdown-item" href="?lang=fr">Français</a></li>
   </ul>
