@@ -46,24 +46,6 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
       </div>
     </div>
 
-<div class="hanging-egg" id="egg">
-  <div class="egg-shell top"></div>
-  <div class="egg-shell bottom"></div>
-  <div class="chick">
-    <div class="chick-eye left"></div>
-    <div class="chick-eye right"></div>
-    <div class="chick-beak"></div>
-  </div>
-</div>
-
-
-<div class="chick-popup" id="chickPopup">
-  <div class="popup-content">
-    <button class="close-popup">&times;</button>
-    <h4>Hello Sayang</h4>
-    <p>Kami sayang om andreas</p>
-  </div>
-</div>
     <nav>
       <ul class="nav align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.php?lang=<?php echo $lang_code; ?>">Home</a></li>
