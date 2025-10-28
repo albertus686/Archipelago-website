@@ -77,11 +77,13 @@ body {
 }
 
 .card-clean {
-  background: #fff;
-  border-radius: 10px;
+  background: #ffffff;
+  border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.03);
-  border: 1px solid #eef2f5;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 10px 8px 30px rgba(8, 53, 253, 0.03);
+  border: 1px solid #d0c9c9;
 }
 
 .products-grid {
@@ -381,3 +383,213 @@ body {
     margin-bottom: 2rem;
   }
 }
+
+.card-clean {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.image-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.image-overlay:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.7);
+}
+
+.overlay-text {
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #000000;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.overlay-text h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.overlay-text p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.location-box {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.location-box h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.location-box p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hanging-egg {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 60px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: swing 3s ease-in-out infinite;
+}
+.hanging-egg::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #d2b48c;
+  transform: translateX(-50%);
+}
+.egg-shell {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background: #fffaf0;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.egg-shell.top { top: 0; z-index: 3; }
+.egg-shell.bottom { bottom: 0; z-index: 1; }
+
+/* 🐥 Anak Ayam */
+.chick {
+  position: absolute;
+  bottom: 15px;
+  width: 40px;
+  height: 40px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.chick-eye {
+  width: 6px;
+  height: 6px;
+  background: #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+}
+.chick-eye.left { left: 10px; }
+.chick-eye.right { right: 10px; }
+.chick-beak {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 10px;
+  height: 8px;
+  background: orange;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: translateX(-50%);
+}
+
+/* Goyangan gantungan */
+@keyframes swing {
+  0%,100% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+}
+
+/* 💥 Saat diklik: animasi retak & netas */
+.hanging-egg.active .egg-shell.top {
+  transform: translateY(-25px) rotate(-12deg);
+}
+.hanging-egg.active .egg-shell.bottom {
+  transform: translateY(25px) rotate(12deg);
+}
+.hanging-egg.active .chick {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Popup Ayam === */
+.chick-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  padding: 20px 25px;
+  z-index: 10000;
+  animation: popupShow 0.4s ease forwards;
+}
+.chick-popup.active {
+  display: block;
+}
+.popup-content {
+  position: relative;
+  text-align: center;
+}
+.popup-content h4 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffcc00;
+}
+.popup-content p {
+  color: #333;
+  margin-top: 5px;
+  font-size: 0.95em;
+}
+.close-popup {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #666;
+}
+.close-popup:hover {
+  color: #000;
+}
+
+/* Animasi popup muncul */
+@keyframes popupShow {
+  from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide img {
+    height: 300px;
+  }
+}
+

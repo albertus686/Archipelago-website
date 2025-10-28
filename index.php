@@ -4,7 +4,7 @@
 <main class="fade-slide-page">
   <section class="hero" id="home">
     <div class="container hero-inner" data-aos="fade-up">
-      <h1><?php echo t('home_title'); ?></h1>
+      <h1 style="font-size:45px;"><?php echo t('home_title'); ?></h1>
       <p class="lead"><?php echo t('home_sub'); ?></p>
       <div class="mt-3"><a class="btn btn-cta me-2" href="products.php?lang=<?php echo $lang_code; ?>">Explore Products</a><a class="btn btn-outline-dark btn-hero-quote" href="contact.php?lang=<?php echo $lang_code; ?>">Get Quote</a></div>
     </div>
@@ -14,7 +14,7 @@
     <div class="container">
       <div class="row align-items-center">
        <div class="col-md-6" data-aos="fade-right"><img src="assets/images/office-skyscrapers-business-district.jpg" class="img-fluid rounded about-section-image"></div>
-       <div class="col-md-6" data-aos="fade-left"><h2><?php echo t('about_title'); ?></h2><?php echo t('about_text'); ?></div>
+       <div class="col-md-6" data-aos="fade-left" style="text-align: justify;"><b><h2 style="font-style: 20px;"><?php echo t('about_title'); ?></b></h2><?php echo t('about_text'); ?></div>
       </div>
     </div>
   </section>

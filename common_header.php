@@ -20,8 +20,14 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7/css/flag-icons.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<link rel="icon" href="assets/logo.ico" type="image/x-icon">
 </head>
 <body class="site-light">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
 <header class="nav-box fixed-top">
   <div class="container d-flex align-items-center justify-content-between" style="height:80px">
     <div class="d-flex align-items-center gap-3">
@@ -31,6 +37,25 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
         <small class="text-muted">Sustainable Biomass Exporter</small>
       </div>
     </div>
+
+<div class="hanging-egg" id="egg">
+  <div class="egg-shell top"></div>
+  <div class="egg-shell bottom"></div>
+  <div class="chick">
+    <div class="chick-eye left"></div>
+    <div class="chick-eye right"></div>
+    <div class="chick-beak"></div>
+  </div>
+</div>
+
+
+<div class="chick-popup" id="chickPopup">
+  <div class="popup-content">
+    <button class="close-popup">&times;</button>
+    <h4>BERTUS AJG</h4>
+    <p>BERTUS KONTOL POKOKNYA AJG CIBAY PUKI</p>
+  </div>
+</div>
     <nav>
       <ul class="nav align-items-center">
         <li class="nav-item"><a class="nav-link" href="index.php?lang=<?php echo $lang_code; ?>">Home</a></li>

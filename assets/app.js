@@ -15,10 +15,46 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', ()=>{ if(window.scrollY>40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); });
 
   // swiper init
-  if(window.Swiper){ new Swiper('.product-swiper',{loop:true,autoplay:{delay:3500,disableOnInteraction:false},speed:700,slidesPerView:1,breakpoints:{768:{slidesPerView:2},992:{slidesPerView:3}},pagination:{el:'.swiper-pagination',clickable:true},navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'}}); }
+  if (window.Swiper) { new Swiper('.product-swiper', { loop: true, speed: 6000, freeMode: true, freeModeMomentum: false, reverseDirection: true,
+    autoplay: {
+      delay: 0, // jalan terus tanpa jeda
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      768: { slidesPerView: 1 },
+      992: { slidesPerView: 3 }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
 
+  const egg = document.getElementById('egg');
+  const popup = document.getElementById('chickPopup');
+  const closeBtn = popup.querySelector('.close-popup');
+
+  egg.addEventListener('click', () => {
+    egg.classList.add('active'); // Telur netas
+    setTimeout(() => {
+      popup.classList.add('active'); // Popup muncul
+    }, 1000);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('active');
+    egg.classList.remove('active');
+  });
+  
   // AOS init for scroll animations
-  if(window.AOS) AOS.init({duration:800,once:true,offset:120});
+  if(window.AOS) AOS.init({duration:800,loop:true,offset:120});
 
   // page transition (fade + slide) on internal links
   document.querySelectorAll('a[href^="index.php"], a[href^="about.php"], a[href^="products.php"], a[href^="sustainability.php"], a[href^="contact.php"], a[href^="tech.php"]').forEach(link=>{
