@@ -64,3 +64,68 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 });
+
+// === NEWSLETTER FORM FEEDBACK ===
+  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterEmailInput = document.getElementById('newsletterEmail');
+  const newsletterMessageDiv = document.getElementById('newsletterMessage');
+  const newsletterSubmitBtn = document.getElementById('newsletterSubmitBtn');
+
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah reload halaman
+
+      // Tampilkan pesan sukses
+      newsletterMessageDiv.textContent = 'Thank you for subscribing!';
+      newsletterMessageDiv.style.display = 'block';
+
+      // Opsional: Kosongkan input email
+      newsletterEmailInput.value = '';
+
+      // Opsional: Disable tombol sebentar
+      newsletterSubmitBtn.disabled = true;
+      newsletterSubmitBtn.innerHTML = '<i class="fa fa-check"></i>'; // Ganti ikon
+
+      // Setelah beberapa detik, sembunyikan pesan & enable tombol lagi
+      setTimeout(() => {
+        newsletterMessageDiv.style.display = 'none';
+        newsletterMessageDiv.textContent = '';
+        newsletterSubmitBtn.disabled = false;
+        newsletterSubmitBtn.innerHTML = '<i class="fa fa-paper-plane"></i>'; // Kembalikan ikon
+      }, 4000); // Sembunyikan setelah 4 detik
+
+      // === CATATAN PENTING ===
+      // Di sini Anda SEHARUSNYA mengirim data email ke backend
+      // menggunakan fetch() atau XMLHttpRequest.
+      // Kode di atas hanya simulasi feedback visual.
+      // Contoh fetch (membutuhkan endpoint backend):
+      /*
+      fetch('backend/subscribe_newsletter.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: newsletterEmailInput.value })
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              // Tampilkan pesan sukses (kode di atas)
+          } else {
+              // Tampilkan pesan error
+              newsletterMessageDiv.textContent = 'Subscription failed. Please try again.';
+              newsletterMessageDiv.style.color = 'red'; // Ganti warna jadi merah
+              newsletterMessageDiv.style.display = 'block';
+              // Logic reset tombol error
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          // Tampilkan pesan error umum
+          newsletterMessageDiv.textContent = 'An error occurred.';
+          newsletterMessageDiv.style.color = 'red';
+          newsletterMessageDiv.style.display = 'block';
+          // Logic reset tombol error
+      });
+      */
+
+    });
+  }

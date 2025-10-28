@@ -14,6 +14,8 @@ body {
   margin: 0;
   color: #122;
   transition: background .35s, color .35s;
+  /* TAMBAHKAN GRADASI LIGHT MODE DI SINI */
+  background: linear-gradient(to top, #ffffff, #ebf8ff); /* Gradasi dari putih ke blue-100 (#ebf8ff) */
 }
 
 .nav-box {
@@ -166,7 +168,7 @@ body {
 }
 
 .dark-mode {
-  background: #071122;
+  background: var(--dark) !important; /* Gunakan !important untuk memastikan override */
   color: #e6eef8;
 }
 
@@ -593,3 +595,408 @@ body {
   }
 }
 
+/* =======================================
+   PERBAIKAN DARK MODE (LEBIH SPESIFIK)
+   ======================================= */
+
+/* --- Section About Us (#about) --- */
+/* (Kode #about Anda sebelumnya tetap di sini) */
+/* --- Section About Us (#about) --- */
+.dark-mode #about {
+  background: linear-gradient(to top, var(--dark), #0e1a31) !important; /* <-- Tambah !important */
+  color: #e6eef8 !important; /* <-- Tambah !important */
+}
+.dark-mode #about h3,
+.dark-mode #about .text-gray-900, 
+.dark-mode #about .text-gray-800,
+.dark-mode #about .font-semibold {
+  color: #fff !important; /* <-- Tambah !important */
+}
+.dark-mode #about p,
+.dark-mode #about .text-gray-600,
+.dark-mode #about .text-gray-500,
+.dark-mode #about .text-sm {
+  color: #cbd5e1 !important; /* <-- Tambah !important */
+}
+.dark-mode #about .text-emerald-600 {
+  color: #34d399 !important; /* <-- Tambah !important */
+}
+.dark-mode #about .bg-white { /* Box kecil di bawah gambar */
+  background-color: #1f2937 !important; /* <-- Tambah !important */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+}
+.dark-mode #about .bg-white h5 {
+   color: #fff !important; /* <-- Tambah !important */
+}
+.dark-mode #about .bg-white p {
+   color: #cbd5e1 !important; /* <-- Tambah !important */
+}
+.dark-mode #about .bg-white svg {
+   color: #34d399 !important; /* <-- Tambah !important */
+}
+
+/* --- Icon Boxes (di bawah #about) --- */
+/* --- Icon Boxes (di bawah #about) --- */
+.dark-mode .bg-gray-50 {
+  background-color: #1f2937 !important; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #374151 !important; 
+}
+.dark-mode .bg-gray-50 h4,
+.dark-mode .bg-gray-50 .font-bold {
+  color: #fff !important; 
+}
+.dark-mode .bg-gray-50 p,
+.dark-mode .bg-gray-50 .text-gray-600 {
+  color: #cbd5e1 !important; 
+}
+.dark-mode .bg-gray-50 .text-emerald-600 {
+   color: #34d399 !important; 
+}
+
+
+/* --- Section Commitment (#commitment) --- */
+.dark-mode #commitment {
+  background: linear-gradient(to bottom, var(--dark), #0e1a31);
+  color: #e6eef8;
+}
+
+/* Judul Utama Section */
+.dark-mode #commitment h2 {
+  color: #fff !important; 
+}
+.dark-mode #commitment .text-emerald-600 { /* Span "Our Commitment" */
+   color: #34d399 !important;
+}
+
+/* Override Tailwind bg-white untuk card di dalam #commitment */
+.dark-mode #commitment .bg-white {
+  background-color: #1f2937 !important; /* gray-800 */
+  border-color: #374151 !important; /* gray-700 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Override hover effect */
+.dark-mode #commitment .bg-white:hover {
+  background: linear-gradient(to bottom right, #374151, #1f2937) !important;
+  border-color: #4b5563 !important;
+}
+
+/* Override text colors di dalam card */
+.dark-mode #commitment .bg-white h4,
+.dark-mode #commitment .bg-white .font-semibold { 
+  color: #fff !important;
+}
+
+.dark-mode #commitment .bg-white p, 
+.dark-mode #commitment .bg-white .text-gray-600 { 
+  color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Override icon colors di dalam card */
+.dark-mode #commitment .bg-white .text-green-600 {
+  color: #34d399 !important; /* emerald-400 */
+}
+
+
+/* --- Section Slider Products (#slider-products) --- */
+/* (Kode #slider-products Anda sebelumnya tetap di sini) */
+.dark-mode #slider-products {
+   background: linear-gradient(to top, var(--dark), #0e1a31);
+   color: #e6eef8;
+}
+.dark-mode #slider-products h2,
+.dark-mode #slider-products h3 {
+  color: #fff;
+}
+.dark-mode #slider-products p {
+  color: #cbd5e1;
+}
+.dark-mode #slider-products .text-emerald-600 {
+   color: #34d399;
+}
+.dark-mode #slider-products video,
+.dark-mode #slider-products img { 
+   border-color: #374151;
+}
+.dark-mode #slider-products .dot { 
+  background-color: #4b5563; 
+}
+.dark-mode #slider-products .dot.bg-green-300 { 
+  background-color: #34d399; 
+}
+
+
+/* --- Card Clean Umum (jika ada di section lain) --- */
+/* (Kode .card-clean Anda sebelumnya tetap di sini) */
+.dark-mode .card-clean {
+  background-color: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.dark-mode .card-clean h5 {
+  color: #fff;
+}
+.dark-mode .card-clean p {
+  color: #cbd5e1;
+}
+
+/* =======================================
+   STYLING UNTUK HR PEMISAH SECTION (HIJAU)
+   ======================================= */
+
+.section-divider {
+  /* Gradasi hijau transparan, meniru gaya sebelumnya */
+  background: linear-gradient(to right, 
+    transparent, 
+    rgba(11, 176, 75, 0.7), /* Warna --green (#0bb04b) dengan 70% opacity */
+    transparent
+  );
+  height: 1px; /* Pastikan tingginya tetap 1px */
+}
+
+/* =======================================
+   TAMBAHAN: BUAT KARTU TRANSPARAN DI LIGHT MODE
+   ======================================= */
+
+/* === PAKSA TRANSPARAN DI LIGHT MODE === */
+body:not(.dark-mode) #about .bg-gray-50, /* Icon Box di About */
+body:not(.dark-mode) #commitment .bg-white, /* Card di Commitment */
+body:not(.dark-mode) .card-clean { /* Card Clean Umum */
+    background-color: transparent !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Pastikan teks tetap gelap di light mode */
+body:not(.dark-mode) #about .bg-gray-50 h4,
+body:not(.dark-mode) #about .bg-gray-50 p,
+body:not(.dark-mode) #commitment .bg-white h4,
+body:not(.dark-mode) #commitment .bg-white p,
+body:not(.dark-mode) .card-clean h5,
+body:not(.dark-mode) .card-clean p {
+    color: inherit !important; /* Biarkan mewarisi warna gelap dari body */
+}
+
+/* Override warna ikon/span hijau spesifik di light mode jika perlu */
+body:not(.dark-mode) #about .bg-gray-50 .text-emerald-600,
+body:not(.dark-mode) #commitment .bg-white .text-green-600 {
+    color: #059669 !important; /* Warna hijau emerald default */
+}
+
+/* Hover effect di light mode */
+body:not(.dark-mode) #commitment .bg-white:hover,
+body:not(.dark-mode) #about .bg-gray-50:hover,
+body:not(.dark-mode) .card-clean:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important; /* Hover putih sedikit terlihat */
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =======================================
+   STYLING FOOTER BARU (MODEL CONTOH)
+   ======================================= */
+
+/* --- Background & Warna Teks Dasar --- */
+.footer-new {
+  background-color: #f8f9fa; /* Background abu-abu sangat muda (light mode) */
+  color: #6c757d; /* Warna teks abu-abu (text-muted) */
+}
+.dark-mode .footer-new {
+  background-color: #0e1a31; /* Background biru tua gelap (dark mode) */
+  color: #adb5bd; /* Warna teks abu-abu terang */
+}
+
+/* --- Heading Kolom --- */
+.footer-heading {
+  color: #343a40; /* Warna heading sedikit lebih gelap */
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dark-mode .footer-heading {
+  color: #e9ecef; /* Warna heading terang di dark mode */
+}
+
+/* --- Logo & Tagline --- */
+/* --- Logo & Tagline --- */
+.footer-logo {
+  width: 300px; /* Sesuaikan ukuran jika perlu */
+  height: auto;
+  margin-bottom: 0; /* << TAMBAHKAN INI UNTUK MENGURANGI JARAK */
+}
+
+.dark-mode .footer-logo {
+  filter: none; /* Baris ini sebenarnya tidak diperlukan lagi, tapi tidak apa-apa dibiarkan */
+}
+.footer-tagline {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* --- Link di Kolom --- */
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+.footer-links a {
+  color: #6c757d; /* Warna link abu-abu */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover {
+  color: var(--blue); /* Warna hover biru */
+  text-decoration: underline;
+}
+.dark-mode .footer-links a {
+  color: #adb5bd; /* Warna link terang di dark mode */
+}
+.dark-mode .footer-links a:hover {
+  color: #dee2e6;
+}
+
+/* --- Ikon Sosial --- */
+.social-icon i {
+  font-size: 1.1rem;
+  color: #6c757d;
+  transition: color 0.2s ease;
+}
+.social-icon:hover i {
+  color: var(--blue);
+}
+.dark-mode .social-icon i {
+  color: #adb5bd;
+}
+.dark-mode .social-icon:hover i {
+  color: #dee2e6;
+}
+
+/* --- Form Newsletter --- */
+.newsletter-form .input-group {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.newsletter-form .form-control {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  font-size: 0.9rem;
+  border-radius: 0;
+  box-shadow: none;
+  border-right: none;
+  /* Tambahkan padding vertikal agar tingginya pas */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.newsletter-form .form-control::placeholder {
+  color: #6c757d;
+}
+.newsletter-form .form-control:focus {
+  z-index: 1;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(11, 110, 253, 0.25);
+}
+
+.newsletter-form .btn {
+  border: 1px solid #ced4da;
+  color: #6c757d;
+  border-radius: 0;
+  border-left: none;
+  /* === ATUR PADDING TOMBOL DI SINI === */
+  padding: 10px 18px; /* Samakan dengan .btn-cta */
+  line-height: 1.5; /* Pastikan ikon di tengah vertikal */
+}
+.newsletter-form .btn:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.dark-mode .newsletter-form .input-group {
+   border-radius: 8px;
+   overflow: hidden;
+}
+.dark-mode .newsletter-form .form-control {
+  background-color: #343a40;
+  border-color: #495057;
+  color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  border-right: none;
+  /* Tambahkan padding vertikal */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.dark-mode .newsletter-form .form-control:focus {
+  z-index: 1;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(11, 110, 253, 0.25);
+}
+.dark-mode .newsletter-form .form-control::placeholder {
+  color: #adb5bd;
+}
+.dark-mode .newsletter-form .btn {
+  border: 1px solid #495057;
+  color: #adb5bd;
+  border-radius: 0;
+  border-left: none;
+  /* === ATUR PADDING TOMBOL DI SINI (DARK MODE) === */
+  padding: 10px 18px; /* Samakan dengan .btn-cta */
+  line-height: 1.5; /* Pastikan ikon di tengah vertikal */
+}
+.dark-mode .newsletter-form .btn:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+/* Fokus state di dark mode */
+.dark-mode .newsletter-form .form-control:focus {
+  z-index: 1;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.2rem rgba(11, 110, 253, 0.25);
+}
+.dark-mode .newsletter-form .form-control::placeholder {
+  color: #adb5bd;
+}
+.dark-mode .newsletter-form .btn {
+  border: 1px solid #495057; /* Pastikan border konsisten */
+  color: #adb5bd;
+  border-radius: 0; 
+  border-left: none;
+}
+.dark-mode .newsletter-form .btn:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+/* --- Garis Pemisah & Baris Bawah --- */
+.footer-divider {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+.dark-mode .footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.footer-bottom-link {
+  color: #6c757d;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-bottom-link:hover {
+  color: var(--blue);
+  text-decoration: underline;
+}
+.dark-mode .footer-bottom-link {
+  color: #adb5bd;
+}
+.dark-mode .footer-bottom-link:hover {
+  color: #dee2e6;
+}
+.dark-mode .text-muted { /* Pastikan text-muted di copyright terang */
+   color: #adb5bd !important;
+}

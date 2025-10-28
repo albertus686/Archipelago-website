@@ -42,7 +42,7 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
       <a href="index.php"><img src="assets/logo.png" alt="logo" class="site-logo"></a>
       <div class="d-none d-md-block">
         <div class="fw-bold company-name">PT Archipelago Jaya Nusantara</div>
-        <small class="text-white-50">Sustainable Biomass Exporter</small>
+        <small class="text-white-50 text-muted">Sustainable Biomass Exporter</small>
       </div>
     </div>
 
@@ -60,8 +60,8 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
 <div class="chick-popup" id="chickPopup">
   <div class="popup-content">
     <button class="close-popup">&times;</button>
-    <h4>BERTUS AJG</h4>
-    <p>BERTUS KONTOL POKOKNYA AJG CIBAY PUKI</p>
+    <h4>Hello Sayang</h4>
+    <p>Kami sayang om andreas</p>
   </div>
 </div>
     <nav>
@@ -69,7 +69,6 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
         <li class="nav-item"><a class="nav-link" href="index.php?lang=<?php echo $lang_code; ?>">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php?lang=<?php echo $lang_code; ?>"><?php echo t('about_title'); ?></a></li>
         <li class="nav-item"><a class="nav-link" href="products.php?lang=<?php echo $lang_code; ?>"><?php echo t('products_title'); ?></a></li>
-        <li class="nav-item"><a class="nav-link" href="sustainability.php?lang=<?php echo $lang_code; ?>"><?php echo t('sustainability_title'); ?></a></li>
         <li class="nav-item"><a class="nav-link" href="contact.php?lang=<?php echo $lang_code; ?>"><?php echo t('contact_title'); ?></a></li>
         <li class="nav-item ms-3"><a class="btn btn-cta" href="contact.php?lang=<?php echo $lang_code; ?>"><?php echo t('get_quote'); ?></a></li>
        <li class="nav-item dropdown ms-3">

@@ -2,43 +2,32 @@
 <div id="loader"><div class="loader-box"><img src="assets/logo.png" class="loader-logo"><div class="loader-text text-white-50">Exporting Sustainable Wood Pellets Worldwide</div></div></div>
 
 <main class="fade-slide-page">
-<!-- <section class="hero" id="home">
-  <div class="container hero-inner" data-aos="fade-up">
-    <h1 style="font-size:45px;"><?php echo t('home_title'); ?></h1>
-    <p class="lead"><?php echo t('home_sub'); ?></p>
-    <div class="mt-3"><a class="btn btn-cta me-2" href="products.php?lang=<?php echo $lang_code; ?>">Explore Products</a><a class="btn btn-outline-dark btn-hero-quote" href="contact.php?lang=<?php echo $lang_code; ?>">Get Quote</a></div>
-  </div>
-</section> -->
 
 <section 
-  class="relative bg-cover bg-center bg-no-repeat py-20"
-  style="background-image: url('images/wood_pellet.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  class="relative bg-cover bg-center bg-no-repeat min-h-screen flex items-center" /* << KELAS TINGGI & ALIGNMENT */
+  style="background-image: url('assets/images/wood_pellet.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <div class="relative z-10 container mx-auto px-6 md:px-12 lg:px-20">
+  <div class="absolute inset-0 bg-black/40"></div> <div class="absolute inset-0 bg-white/10"></div> <div class="relative z-10 container mx-auto px-6 md:px-12 lg:px-20"> 
     <div class="grid lg:grid-cols-2 items-center gap-10">
 
-      <!-- Text Section -->
       <div class="text-white">
         <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg">
-          The Best Ways to Promote a New Product or Service
+          <?php echo t('home_title'); ?>
         </h1>
         <br>
         <p class="text-lg text-gray-200 max-w-lg leading-relaxed">
-          Start your business today with a great and strong landing page made to enhance your brand visibility.
+          <?php echo t('home_sub'); ?>
         </p>
         <br>  
-        <button class="px-8 py-3 bg-gradient-to-r from-green-500 to-teal-400 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
-          Try for Free
-        </button>
+        <a href="products.php?lang=<?php echo $lang_code; ?>" class="px-8 py-3 bg-gradient-to-r from-green-500 to-teal-400 text-white font-semibold rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+          <?php echo t('explore_products'); ?> 
+        </a>
       </div>
 
-      <!-- Form Section -->
-      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20">
-        <h3 class="text-3xl font-semibold mb-2 text-white">Get in Touch</h3>
-        <p class="text-gray-200 mb-6">We’d love to hear from you! Fill out the form below.</p>
-
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20 mt-8"> 
+        <h3 class="text-3xl font-semibold mb-2 text-white"><?php echo t('Get in Touch') ?: 'Request a Quote'; ?></h3> <p class="text-gray-200 mb-6">
+          <?php echo t('We’d love to hear from you! Fill out the form below.') ?: 'Fill out the form below to get a quote.'; ?>
+        
         <form class="space-y-4">
           <input type="text" placeholder="Company Name" class="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-200 text-white focus:outline-none focus:ring-2 focus:ring-teal-400">
           <input type="text" placeholder="Full Name" class="w-full px-4 py-3 rounded-lg bg-white/20 placeholder-gray-200 text-white focus:outline-none focus:ring-2 focus:ring-teal-400">
@@ -50,17 +39,17 @@
             Send Message
           </button>
         </form>
+
       </div>
 
     </div>
   </div>
 </section>
   
-<section id="about" class="py-20 bg-gradient-to-t from-blue-100 to-white relative overflow-hidden" data-aos="fade-left">
+<section id="about" class="py-20 relative overflow-hidden" data-aos="fade-left">
   <div class="container mx-auto px-6 lg:px-12">
     <div class="grid lg:grid-cols-2 gap-10 items-center">
 
-      <!-- Text Section -->
       <div class="space-y-6" data-aos="fade-right">
         <div class="flex items-center space-x-3" data-aos="fade-left">
           <div class="w-3 h-3 rounded-full bg-emerald-600"></div>
@@ -91,7 +80,6 @@
         </a>
       </div>
 
-      <!-- Image Section -->
       <div class="relative" data-aos="fade-left">
         <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
           <img src="assets/images/kantor.jpeg" alt="Archipelago Jaya Nusantara" class="w-full h-[500px] object-cover">
@@ -108,7 +96,6 @@
       </div>
     </div>
 
-    <!-- Icon Boxes -->
     <div class="grid md:grid-cols-3 gap-6 mt-20" data-aos="fade-up">
       <div class="p-8 bg-gray-50 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
         <div class="text-emerald-600 mb-4">
@@ -142,10 +129,10 @@
     </div>
   </div>
   <br><br><br><br><br><br>
-  <hr class="border-0 h-px bg-gradient-to-r from-transparent via-black/70 to-transparent my-10 -translate-y-2" data-aos="fade-left">
+  <hr class="section-divider border-0 h-px my-10 -translate-y-2" data-aos="fade-left">
 </section>
 
-<section id="commitment" class="py-20 bg-gradient-to-b from-blue-100 to-white relative overflow-hidden">
+<section id="commitment" class="py-20 relative overflow-hidden">
   <div class="container mx-auto px-6">
     <div class="flex items-center space-x-3" data-aos="fade-left">
       <div class="w-3 h-3 rounded-full bg-emerald-600"></div>
@@ -157,7 +144,6 @@
 
     <div class="grid md:grid-cols-2 gap-10" data-aos="fade-up">
 
-      <!-- Card 1 -->
       <div class="bg-white rounded-2xl shadow-md border border-green-100 p-8 transition duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:border-green-300 hover:bg-gradient-to-br hover:from-green-50 hover:to-white">
         <div class="flex items-center mb-4">
           <div class="text-green-600 text-4xl mr-4">
@@ -170,7 +156,6 @@
         </p>
       </div>
 
-      <!-- Card 2 -->
       <div class="bg-white rounded-2xl shadow-md border border-green-100 p-8 transition duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:border-green-300 hover:bg-gradient-to-br hover:from-green-50 hover:to-white">
         <div class="flex items-center mb-4">
           <div class="text-green-600 text-4xl mr-4">
@@ -183,7 +168,6 @@
         </p>
       </div>
 
-      <!-- Card 3 -->
       <div class="bg-white rounded-2xl shadow-md border border-green-100 p-8 transition duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:border-green-300 hover:bg-gradient-to-br hover:from-green-50 hover:to-white">
         <div class="flex items-center mb-4">
           <div class="text-green-600 text-4xl mr-4">
@@ -196,7 +180,6 @@
         </p>
       </div>
 
-      <!-- Card 4 -->
       <div class="bg-white rounded-2xl shadow-md border border-green-100 p-8 transition duration-500 transform hover:-translate-y-2 hover:shadow-xl hover:border-green-300 hover:bg-gradient-to-br hover:from-green-50 hover:to-white">
         <div class="flex items-center mb-4">
           <div class="text-green-600 text-4xl mr-4">
@@ -211,11 +194,11 @@
 
     </div>
   </div>
+  <br><br><br><br><br><br>
+  <hr class="section-divider border-0 h-px my-10 -translate-y-2" data-aos="fade-left">
 </section>
 
-<hr class="border-0 h-px bg-gradient-to-r from-transparent via-black/70 to-transparent my-10 -translate-y-2" data-aos="fade-left">
-
-<section id="slider-products" class="py-20 bg-gradient-to-t from-blue-100 to-white relative overflow-hidden">
+<section id="slider-products" class="py-20 relative overflow-hidden">
   <div class="container mx-auto px-6">
     <div class="flex items-center space-x-3" data-aos="fade-left">
       <div class="w-3 h-3 rounded-full bg-emerald-600"></div>
@@ -227,7 +210,6 @@
 
     <div class="overflow-hidden relative">
       <div id="productSlider" class="flex transition-transform duration-700 ease-in-out">
-        <!-- Slide 1 -->
         <div class="min-w-full flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-1/2">
             <video autoplay muted loop playsinline class="rounded-2xl shadow-xl border border-green-100">
@@ -243,7 +225,6 @@
           </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="min-w-full flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-1/2">
             <video autoplay muted loop playsinline class="rounded-2xl shadow-xl border border-green-100">
@@ -259,7 +240,6 @@
           </div>
         </div>
 
-        <!-- Slide 3 -->
         <div class="min-w-full flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-1/2">
             <video autoplay muted loop playsinline class="rounded-2xl shadow-xl border border-green-100">
@@ -277,7 +257,6 @@
       </div>
       
 
-      <!-- Pagination dots -->
       <div class="flex justify-center mt-10 space-x-3">
         <button class="dot w-3 h-3 rounded-full bg-green-300"></button>
         <button class="dot w-3 h-3 rounded-full bg-green-200"></button>
@@ -304,15 +283,18 @@
   setInterval(changeSlide, 5000);
 
   document.addEventListener("DOMContentLoaded", () => {
-    const title = document.querySelector(".hero-text");
-    const text = title.textContent;
-    title.textContent = "";
-    [...text].forEach((letter, i) => {
-      const span = document.createElement("span");
-      span.textContent = letter;
-      span.style.animationDelay = `${i * 0.05}s`;
-      title.appendChild(span);
-    });
+    // Check if hero-text exists before trying to access its properties
+    const title = document.querySelector(".hero-text"); // This class might be missing
+    if (title) { // Add this check
+      const text = title.textContent;
+      title.textContent = "";
+      [...text].forEach((letter, i) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.style.animationDelay = `${i * 0.05}s`;
+        title.appendChild(span);
+      });
+    } // End of check
   });
 </script>
 

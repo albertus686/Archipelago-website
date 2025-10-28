@@ -1,49 +1,81 @@
 <?php
 // (Baris <?php ini mungkin sudah ada di file Anda, tidak perlu didobel)
 ?>
-<footer class="footer">
-  <div class="container py-5">
-    
-    <div class="row gy-4 align-items-center"> 
+<footer class="footer-new pt-5 pb-4" data-aos="fade-up">
+  <div class="container">
+    <div class="row gy-4">
 
-      <div class="col-md-4 footer-brand-col"> 
-        <img src="assets/logo-white.png" class="footer-logo" alt="Archipelago Jaya Nusantara Logo">
-        <h5 class="mt-2">PT Archipelago Jaya Nusantara</h5> 
-        <p class="small text-white-50">Sustainable Biomass Exporter</p>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <img src="assets/logoacpfooter.png" class="footer-logo mb-3" alt="Archipelago Jaya Nusantara Logo"> 
+        <p class="footer-tagline text-muted">Sustainable Biomass Exporter delivering responsibly sourced biomass fuel to global markets.</p>
+        <div class="footer-social mt-3">
+          <a href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%C2%A0looking%C2%A0for." class="social-icon me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/archipelagojayanusantara/" class="social-icon me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/archipelagojayanusantara" class="social-icon me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/107803014" class="social-icon me-3" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          </div>
       </div>
 
-      <div class="col-md-4">
-        <div class="row">
-          
-          <div class="col-6 pe-lg-4" style="margin-left: -100px;"> <h6>Contact</h6>
-            <p class="small mb-1 footer-contact-item" style="text-align: justify;"><i class="fa fa-map-marker-alt me-2"></i><?php echo t('address'); ?></p>
-            <p class="small mb-1 footer-contact-item" style="text-align: justify;"><i class="fa fa-phone me-2"></i><?php echo t('phone'); ?></p>
-            <p class="small mb-3 footer-contact-item" style="text-align: justify;"><i class="fa fa-envelope me-2"></i><?php echo t('email_contact'); ?></p> 
-            
-            <div class="mt-3"> 
-              <a href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%20looking%20for." class="me-3 social"><i class="fab fa-whatsapp fa-lg"></i></a>
-              <a href="https://www.facebook.com/archipelagojayanusantara" class="me-3 social"><i class="fab fa-facebook fa-lg"></i></a>
-              <a href="https://www.linkedin.com/company/107803014/" class="me-3 social"><i class="fab fa-linkedin fa-lg"></i></a>
-              <a href="https://www.instagram.com/archipelagojayanusantara/?utm_source=ig_web_button_share_sheet" class="me-3 social"><i class="fab fa-instagram fa-lg"></i></a>
-            </div>
-          </div>
-
-          <div class="col-6 ps-lg-7" style="margin-left: 100px;"> <h6>Help & Legal</h6>
-            <ul class="list-unstyled"> 
-              <li><a href="#" class="footer-link"><?php echo t('terms'); ?></a></li>
-              <li><a href="#" class="footer-link"><?php echo t('privacy'); ?></a></li>
-            </ul>
-            
-          </div>
-  
-        </div> </div> <div class="col-md-4">
-        <div class="map-area-inline"> 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1327683265677!2d106.82371687568447!3d-6.246229093742174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3da5be46585%3A0xb334b09530c5dd45!2sJl.%20Mampang%20Prpt.%20Raya%20No.73a%2C%20RT.1%2FRW.6%2C%20Tegal%20Parang%2C%20Kec.%20Mampang%20Prpt.%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012790!5e0!3m2!1sen!2sid!4v1761053874235!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+      <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <h6 class="footer-heading mb-3">Quick Links</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.php?lang=<?php echo $lang_code; ?>">Home</a></li>
+          <li><a href="about.php?lang=<?php echo $lang_code; ?>"><?php echo t('about_title'); ?></a></li>
+          <li><a href="products.php?lang=<?php echo $lang_code; ?>"><?php echo t('products_title'); ?></a></li>
+          <li><a href="sustainability.php?lang=<?php echo $lang_code; ?>"><?php echo t('sustainability_title'); ?></a></li>
+        </ul>
       </div>
 
-    </div> </div> </footer>
-<a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%20looking%20for." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+      <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <h6 class="footer-heading mb-3">Services</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Wood Pellets</a></li>
+          <li><a href="#">Biomass Supply</a></li>
+          <li><a href="#">Export Logistics</a></li>
+          <li><a href="#">Consultation</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-lg-0">
+        <h6 class="footer-heading mb-3">Support</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="contact.php?lang=<?php echo $lang_code; ?>"><?php echo t('contact_title'); ?></a></li>
+          <li><a href="#"><?php echo t('terms'); ?></a></li>
+          <li><a href="#"><?php echo t('privacy'); ?></a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6 class="footer-heading mb-3">Newsletter</h6>
+        <p class="small text-muted mb-3">Subscribe to receive future updates.</p>
+        <form id="newsletterForm" method="post" class="newsletter-form"> 
+          <div class="input-group">
+            <input type="email" id="newsletterEmail" class="form-control" placeholder="Email address" required>
+            <button class="btn btn-outline-secondary" type="submit" id="newsletterSubmitBtn"><i class="fa fa-paper-plane"></i></button>
+          </div>
+        </form>
+        <div id="newsletterMessage" class="small mt-2" style="display: none; color: var(--green);"></div> 
+      </div>
+
+    </div>
+
+    <hr class="footer-divider my-4">
+
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+         <a href="#" class="footer-bottom-link me-3">English</a>
+         <a href="#" class="footer-bottom-link me-3"><?php echo t('privacy'); ?></a>
+         <a href="#" class="footer-bottom-link">Support</a>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="small text-muted mb-0">&copy; <?php echo date('Y'); ?> PT Archipelago Jaya Nusantara. All rights reserved.</p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%C2%A0looking%C2%A0for." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
