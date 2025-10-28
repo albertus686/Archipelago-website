@@ -15,19 +15,20 @@
       <div class="col-md-4">
         <div class="row">
           
-          <div class="col-6 pe-lg-4"> <h6>Contact</h6>
-            <p class="small mb-1 footer-contact-item"><i class="fa fa-map-marker-alt me-2"></i><?php echo t('address'); ?></p>
-            <p class="small mb-1 footer-contact-item"><i class="fa fa-phone me-2"></i><?php echo t('phone'); ?></p>
-            <p class="small mb-3 footer-contact-item"><i class="fa fa-envelope me-2"></i><?php echo t('email_contact'); ?></p> 
+          <div class="col-6 pe-lg-4" style="margin-left: -100px;"> <h6>Contact</h6>
+            <p class="small mb-1 footer-contact-item" style="text-align: justify;"><i class="fa fa-map-marker-alt me-2"></i><?php echo t('address'); ?></p>
+            <p class="small mb-1 footer-contact-item" style="text-align: justify;"><i class="fa fa-phone me-2"></i><?php echo t('phone'); ?></p>
+            <p class="small mb-3 footer-contact-item" style="text-align: justify;"><i class="fa fa-envelope me-2"></i><?php echo t('email_contact'); ?></p> 
             
             <div class="mt-3"> 
               <a href="https://api.whatsapp.com/send?phone=6285700800872&text=Thanks%20for%20reaching%20out%20to%20Archipelago%20Jaya%20Nusantara!%20Let%20us%20know%20what%20you%27re%20looking%20for." class="me-3 social"><i class="fab fa-whatsapp fa-lg"></i></a>
               <a href="https://www.facebook.com/archipelagojayanusantara" class="me-3 social"><i class="fab fa-facebook fa-lg"></i></a>
               <a href="https://www.linkedin.com/company/107803014/" class="me-3 social"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://www.instagram.com/archipelagojayanusantara/?utm_source=ig_web_button_share_sheet" class="me-3 social"><i class="fab fa-instagram fa-lg"></i></a>
             </div>
           </div>
 
-          <div class="col-6 ps-lg-7"> <h6>Help & Legal</h6>
+          <div class="col-6 ps-lg-7" style="margin-left: 100px;"> <h6>Help & Legal</h6>
             <ul class="list-unstyled"> 
               <li><a href="#" class="footer-link"><?php echo t('terms'); ?></a></li>
               <li><a href="#" class="footer-link"><?php echo t('privacy'); ?></a></li>

@@ -3,7 +3,7 @@ return [
   "home_title" => "Sustainable Wood Pellet Exporter From Indonesia",
   "home_sub" => "Delivering responsibly sourced biomass fuel to global markets.",
   "about_title" => "About Us",
-  "about_text" => "<p><b>PT Archipelago Jaya Nusantara</b> is a company engaged in various sectors, including biomass energy.</p>Our vision is to support the global shift toward more environmentally friendly energy sources by providing high-quality products such as wood pellets. As an international wood pellet exporter, we are committed to helping buyers obtain the products they need through clear, fast, and efficient communication. We believe that strong business relationships are built on trust, transparency, and professionalism.",
+  "about_text" => "<p><b>PT Archipelago Jaya Nusantara</b> is a company engaged in various sectors, including biomass energy.</p><br>Our vision is to support the global shift toward more environmentally friendly energy sources by providing high-quality products such as wood pellets. As an international wood pellet exporter, we are committed to helping buyers obtain the products they need through clear, fast, and efficient communication. We believe that strong business relationships are built on trust, transparency, and professionalism.",
   "about_text_2" => "<p>Driven by sustainability and innovation, PT Archipelago Jaya Nusantara aims to be a trusted partner in providing green energy for a cleaner and more sustainable world.</p>",
   "products_title" => "Our Products",
   "sustainability_title" => "Sustainability",

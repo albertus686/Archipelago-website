@@ -11,6 +11,7 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
 <title>PT Archipelago Jaya Nusantara | Export Wood Pellets</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
@@ -22,6 +23,13 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7/css/flag-icons.min.css"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <link rel="icon" href="assets/logo.ico" type="image/x-icon">
 </head>
 <body class="site-light">
@@ -34,7 +42,7 @@ function t($k){ global $lang; return $lang[$k] ?? $k; }
       <a href="index.php"><img src="assets/logo.png" alt="logo" class="site-logo"></a>
       <div class="d-none d-md-block">
         <div class="fw-bold company-name">PT Archipelago Jaya Nusantara</div>
-        <small class="text-muted">Sustainable Biomass Exporter</small>
+        <small class="text-white-50">Sustainable Biomass Exporter</small>
       </div>
     </div>
 
