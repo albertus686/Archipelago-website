@@ -36,22 +36,6 @@ document.addEventListener('DOMContentLoaded', function(){
     },
   });
 }
-
-  const egg = document.getElementById('egg');
-  const popup = document.getElementById('chickPopup');
-  const closeBtn = popup.querySelector('.close-popup');
-
-  egg.addEventListener('click', () => {
-    egg.classList.add('active'); // Telur netas
-    setTimeout(() => {
-      popup.classList.add('active'); // Popup muncul
-    }, 1000);
-  });
-
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
-    egg.classList.remove('active');
-  });
   
   // AOS init for scroll animations
   if(window.AOS) AOS.init({duration:800,loop:true,offset:120});
