@@ -15,6 +15,9 @@ return [
   "name" => "Name",
   "email" => "Email",
   "message" => "Message",
+  "subject" => "Subject", // Key baru
+  "subject_placeholder" => "Enter your subject...", // Key baru
+  "message_placeholder" => "Type your message here...", // Key baru
   "company" => "Company",
   "product" => "Product",
   "quantity" => "Quantity (tons)",
